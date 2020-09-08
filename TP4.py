@@ -1,5 +1,6 @@
 #Nombre del producto------------------------------
 N = input("Ingrese el nombre del producto: ")
+print("")
 
 #Ingreso de Primer Material-----------------------
 Materiales={}
@@ -9,10 +10,15 @@ Materiales[M]=C
 
 #Funcion de Menu----------------------------------
 def Menu():
-	print("Menu de OPCIONES")
-	print("1-Agregar Producto")
-	print("2-Mostrar el nombre del producto y sus materiales")	
-	print("3-Terminar Programa")
+	print(" ")
+	print("######################################################")
+	print("#              Menu de OPCIONES                      #")
+	print("#  1-Agregar producto                                #")
+	print("#  2-Mostrar el nombre del producto y sus materiales #")	
+	print("#  3-Terminar Programa                               #")
+	print("######################################################")
+	print(" ")
+
 
 #Bucle del Menu-----------------------------------
 def ElegirOpcion():
@@ -29,6 +35,10 @@ def ElegirOpcion():
 			Materiales[M]=C
 
 		elif Estado == 2:
+			print("El producto es ", N)
+			print("La receta para hacer este producto es: ")
+			for A,B in Materiales.items():
+				print(A, ' --> ', B)
 
 
 		elif Estado == 3:
