@@ -1,14 +1,22 @@
 #Nombre del producto------------------------------
-N = input("Ingrese el nombre del producto: ")
+
+N = str(input("Ingrese el nombre del producto: "))
 print("")
 
 #Ingreso de Primer Material-----------------------
+
 Materiales={}
 M=input("Ingrese el primer material: ")
-C=int(input("Ingrese la cantidad que uso: "))
+while True:
+	try:
+		C=int(input("Ingrese la cantidad que uso: "))
+		break
+	except ValueError:
+		print("Los valores introducidos no son correctos")
 Materiales[M]=C
 
 #Funcion de Menu----------------------------------
+
 def Menu():
 	print(" ")
 	print("######################################################")
@@ -19,19 +27,28 @@ def Menu():
 	print("######################################################")
 	print(" ")
 
-
 #Bucle del Menu-----------------------------------
+
 def ElegirOpcion():
 	Estado = 2
 	while True:
 
 		Menu()
-
-		Estado=int(input("Ingrese una opcion: "))
+		while True:
+			try:
+				Estado=int(input("Ingrese una opcion: "))
+				break
+			except ValueError:
+				print("Los valores introducidos no son correctos")
 
 		if Estado == 1:
 			M=input("Ingrese el material: ")
-			C=int(input("Ingrese la cantidad que uso: "))
+			while True:
+				try:
+					C=int(input("Ingrese la cantidad que uso: "))
+					break
+				except ValueError:
+					print("Los valores introducidos no son correctos")
 			Materiales[M]=C
 
 		elif Estado == 2:
