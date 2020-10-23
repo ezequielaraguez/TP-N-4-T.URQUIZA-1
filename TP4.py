@@ -1,6 +1,7 @@
 #Nombre del producto------------------------------
 
 N = str(input("Ingrese el nombre del producto: "))
+TIEMPO = int(input("Ingrese el tiempo de coccion en mimutos: "))
 print("")
 
 #Ingreso de Primer Material-----------------------
@@ -22,7 +23,8 @@ def Menu():
 	print("######################################################")
 	print("#              Menu de OPCIONES                      #")
 	print("#  1-Agregar producto                                #")
-	print("#  2-Mostrar el nombre del producto y sus materiales #")	
+	print("#  2-Mostrar el nombre del producto, sus materiales  #")	
+	print("#                         y el tiempo de coccion     #")
 	print("#  3-Terminar Programa                               #")
 	print("######################################################")
 	print(" ")
@@ -54,6 +56,7 @@ def ElegirOpcion():
 		elif Estado == 2:
 			print("El producto es ", N)
 			print("La receta para hacer este producto es: ")
+			print("El tiempo de coccion es de ", TIEMPO, " minutos.")
 			for A,B in Materiales.items():
 				print(A, ' --> ', B)
 
